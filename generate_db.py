@@ -576,8 +576,17 @@ def truncate_all_tables():
     cur = conn.cursor()
     
     # Truncate in reverse dependency order
-    tables = ["maintenancelogs","routestops","orderitems","orders","productvariants","products",
-              "deliveryroutes","users","vehicles","warehouses","categories"]
+    tables = [
+        "qualitychecks", "shipments", "purchaseorderitems", "purchaseorders",
+        "proofofdelivery", "routestops", "deliveryroutes", "deliveryshipments",
+        "maintenancelogs", "drivers", "vehicles",
+        "payments", "orderitems", "orders",
+        "inventory", "productvariants", "products",
+        "taxes", "promotions",
+        "suppliers", "warehouses",
+        "userroles", "rolepermissions", "permissions", "roles",
+        "users", "categories"
+    ]
     
     for table in tables:
         try:
