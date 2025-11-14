@@ -14,7 +14,7 @@ OUT_DIR.mkdir(parents=True, exist_ok=True)
 
 DB_HOST = "localhost"
 DB_NAME = "omniship"
-DB_USER = "postgres"
+DB_USER = os.getenv("USER") or "postgres"
 DB_PASS = "admin"
 DB_PORT = 5432
 
